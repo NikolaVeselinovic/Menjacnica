@@ -13,7 +13,7 @@ public class valuta {
 	}
 	public void setNaziv(String naziv) {
 		if(naziv==null || naziv.isEmpty()){
-			throw new RuntimeException();}
+			throw new RuntimeException("uneti su pogresni parametri");}
 		else{
 			this.naziv = naziv;}
 	}
@@ -21,7 +21,7 @@ public class valuta {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
-		if(datum==null){throw new RuntimeException();}
+		if(datum==null){throw new RuntimeException("uneti su pogresni parametri");}
 		else
 		this.datum = datum;
 	}
@@ -29,7 +29,7 @@ public class valuta {
 		return prodajniKurs;
 	}
 	public void setProdajniKurs(double prodajniKurs) {
-		if(prodajniKurs<=0){throw new RuntimeException();}
+		if(prodajniKurs<=0){throw new RuntimeException("uneti su pogresni parametri");}
 		else{
 		this.prodajniKurs = prodajniKurs;}
 	}
@@ -37,7 +37,7 @@ public class valuta {
 		return srednjiKurs;
 	}
 	public void setSrednjiKurs(double srednjiKurs) {
-		if(srednjiKurs<=0){throw new RuntimeException();}
+		if(srednjiKurs<=0){throw new RuntimeException("uneti su pogresni parametri");}
 		else
 		{this.srednjiKurs = srednjiKurs;
 		}
@@ -46,7 +46,7 @@ public class valuta {
 		return kupovniKurs;
 	}
 	public void setKupovniKurs(double kupovniKurs) {
-		if(kupovniKurs<=0){throw new RuntimeException();}
+		if(kupovniKurs<=0){throw new RuntimeException("uneti su pogresni parametri");}
 		else{
 		this.kupovniKurs = kupovniKurs;}
 	}
@@ -94,8 +94,7 @@ public class valuta {
 	}
 	@Override
 	public String toString() {
-		return "valuta [naziv=" + naziv + ", datum=" + datum + ", prodajniKurs=" + prodajniKurs + ", srednjiKurs="
-				+ srednjiKurs + ", kupovniKurs=" + kupovniKurs + "]";
+		return "DATUM: "+datum+"|"+naziv+"|"+kupovniKurs+"|"+srednjiKurs+"|"+prodajniKurs;
 	}
 	
 }
