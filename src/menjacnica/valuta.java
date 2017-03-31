@@ -12,31 +12,43 @@ public class valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if(naziv==null || naziv.isEmpty()){
+			throw new RuntimeException();}
+		else{
+			this.naziv = naziv;}
 	}
 	public GregorianCalendar getDatum() {
 		return datum;
 	}
 	public void setDatum(GregorianCalendar datum) {
+		if(datum==null){throw new RuntimeException();}
+		else
 		this.datum = datum;
 	}
 	public double getProdajniKurs() {
 		return prodajniKurs;
 	}
 	public void setProdajniKurs(double prodajniKurs) {
-		this.prodajniKurs = prodajniKurs;
+		if(prodajniKurs<=0){throw new RuntimeException();}
+		else{
+		this.prodajniKurs = prodajniKurs;}
 	}
 	public double getSrednjiKurs() {
 		return srednjiKurs;
 	}
 	public void setSrednjiKurs(double srednjiKurs) {
-		this.srednjiKurs = srednjiKurs;
+		if(srednjiKurs<=0){throw new RuntimeException();}
+		else
+		{this.srednjiKurs = srednjiKurs;
+		}
 	}
 	public double getKupovniKurs() {
 		return kupovniKurs;
 	}
 	public void setKupovniKurs(double kupovniKurs) {
-		this.kupovniKurs = kupovniKurs;
+		if(kupovniKurs<=0){throw new RuntimeException();}
+		else{
+		this.kupovniKurs = kupovniKurs;}
 	}
 	@Override
 	public int hashCode() {
